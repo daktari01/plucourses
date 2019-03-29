@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
+import mapStateToProps from "react-redux/es/connect/mapStateToProps";
+import mapDispatchToProps from "react-redux/es/connect/mapDispatchToProps";
 
 class CoursesPage extends Component {
     state = {
@@ -29,4 +32,4 @@ class CoursesPage extends Component {
   }
 }
 
-export default CoursesPage;
+export default connect(mapStateToProps, mapDispatchToProps) CoursesPage;
